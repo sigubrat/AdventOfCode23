@@ -13,11 +13,11 @@
           inherit system;
           overlays = [
             (f: p: {
-              sbt = p.sbt.override { jre = p.jdk19_headless; };
+              sbt = p.sbt.override { jre = p.jdk21_headless; };
             })
           ];
         };
-        jdk = pkgs.jdk19_headless;
+        jdk = pkgs.jdk21_headless;
 
         jvmInputs = with pkgs; [
           jdk
