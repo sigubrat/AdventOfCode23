@@ -41,7 +41,6 @@ object Day1 {
 
     // Sort the matches by their indices
     val sortedMatches = matches.toList.sortBy(_._1)
-    // Return the first or last match
     if (findFirst) sortedMatches.headOption.map(_._2)
     else sortedMatches.lastOption.map(_._2)
   }
